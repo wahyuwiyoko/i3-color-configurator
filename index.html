@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="i3 color configurator for i3, i3status, and dmenu">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <title>i3 Color Configurator</title>
+  </head>
+  <body>
+    <header>
+      <div class="dmenu">
+        <span class="prompt">dmenu prompt</span>
+
+        <div class="items">
+          <span>[</span>
+          <span class="selected">411toppm</span>
+          <span>aa-enabled</span>
+          <span>ac-local</span>
+          <span>aconnect</span>
+          <span>acpi</span>
+          <span>acyclic</span>
+          <span>addpart</span>
+        </div>
+      </div>
+
+      <div class="responsive-table">
+        <table>
+          <tr>
+            <td>Focused Window</td>
+            <td>Inactive Window</td>
+            <td>Unfocused Window</td>
+            <td>Urgent Window</td>
+            <td>Placeholder Window</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+    </header>
+
+    <main>
+      <h1>Colorscheme Configurator for i3, i3status, and dmenu</h1>
+
+      <section class="i3-colors">
+        <article>
+          <h2>i3 Windows</h2>
+        </article>
+
+        <article>
+          <h2>i3 Workspaces</h2>
+        </article>
+
+        <article>
+          <h2>i3status</h2>
+        </article>
+
+        <article>
+          <h2>dmenu</h2>
+        </article>
+      </section>
+
+      <section class="codes">
+        <article>
+          <h2>~/.config/i3/config</h2>
+
+          <pre>
+            <code></code>
+          </pre>
+        </article>
+
+        <article>
+          <h2>~/.config/i3status/config</h2>
+
+          <pre>
+            <code></code>
+          </pre>
+        </article>
+      </section>
+
+      <section class="references">
+        <a href="https://i3wm.org/docs/userguide.html" target="_blank">i3 documentation</a> |
+        <a href="https://i3wm.org/docs/i3status.html" target="_blank">i3status documentation</a> |
+        <a href="https://github.com/tlhunter/i3-i3status-dmenu-configurator" target="_blank">Fork of Thomas Hunter</a>
+      </section>
+    </main>
+
+    <footer class="i3status">
+      <div class="workspaces">
+        <span>1: Focused</span>
+        <span>2: Active</span>
+        <span>3: Inactive</span>
+        <span>4: Urgent</span>
+        <span>5: Binding</span>
+        <span>6</span>
+        <span>7</span>
+      </div>
+
+      <div class="bar">
+      </div>
+    </footer>
+  </body>
+</html>
