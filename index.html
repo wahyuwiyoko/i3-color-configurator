@@ -28,18 +28,18 @@
       <div class="responsive-table">
         <table>
           <tr>
-            <td>Focused Window</td>
-            <td>Inactive Window</td>
-            <td>Unfocused Window</td>
-            <td>Urgent Window</td>
-            <td>Placeholder Window</td>
+            <td id="focused-window">Focused Window</td>
+            <td id="inactive-window">Inactive Window</td>
+            <td id="unfocused-window">Unfocused Window</td>
+            <td id="urgent-window">Urgent Window</td>
+            <td id="placeholder-window">Placeholder Window</td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td id="window"></td>
+            <td id="window"></td>
+            <td id="window"></td>
+            <td id="window"></td>
+            <td id="window"></td>
           </tr>
         </table>
       </div>
@@ -51,18 +51,172 @@
       <section class="i3-colors">
         <article>
           <h2>i3 Windows</h2>
+
+          <div class="responsive-table">
+            <table>
+              <tr>
+                <td>Class</td>
+                <td>Border</td>
+                <td>Background</td>
+                <td>Text</td>
+                <td>Indicator</td>
+                <td>Child Border</td>
+              </tr>
+              <tr>
+                <td>Focused</td>
+                <td><input type="color" id="title-focused-border"></td>
+                <td><input type="color" id="title-focused-bg"></td>
+                <td><input type="color" id="title-focused-text"></td>
+                <td><input type="color" id="title-focused-indicator"></td>
+                <td><input type="color" id="title-focused-child-border"></td>
+              </tr>
+              <tr>
+                <td>Inactive</td>
+                <td><input type="color" id="title-inactive-border"></td>
+                <td><input type="color" id="title-inactive-bg"></td>
+                <td><input type="color" id="title-inactive-text"></td>
+                <td><input type="color" id="title-inactive-indicator"></td>
+                <td><input type="color" id="title-inactive-child-border"></td>
+              </tr>
+              <tr>
+                <td>Unfocused</td>
+                <td><input type="color" id="title-unfocused-border"></td>
+                <td><input type="color" id="title-unfocused-bg"></td>
+                <td><input type="color" id="title-unfocused-text"></td>
+                <td><input type="color" id="title-unfocused-indicator"></td>
+                <td><input type="color" id="title-unfocused-child-border"></td>
+              </tr>
+              <tr>
+                <td>Urgent</td>
+                <td><input type="color" id="title-urgent-border"></td>
+                <td><input type="color" id="title-urgent-bg"></td>
+                <td><input type="color" id="title-urgent-text"></td>
+                <td><input type="color" id="title-urgent-indicator"></td>
+                <td><input type="color" id="title-urgent-child-border"></td>
+              </tr>
+              <tr>
+                <td>Placeholder</td>
+                <td><input type="color" id="title-placeholder-border"></td>
+                <td><input type="color" id="title-placeholder-bg"></td>
+                <td><input type="color" id="title-placeholder-text"></td>
+                <td><input type="color" id="title-placeholder-indicator"></td>
+                <td><input type="color" id="title-placeholder-child-border"></td>
+              </tr>
+              <tr>
+                <td>Window</td>
+                <td></td>
+                <td><input type="color" id="title-window"></td>
+              </tr>
+            </table>
+          </div>
         </article>
 
         <article>
           <h2>i3 Workspaces</h2>
+
+          <div class="responsive-table">
+            <table>
+              <tr>
+                <td>Class</td>
+                <td>Border</td>
+                <td>Background</td>
+                <td>Text</td>
+              </tr>
+              <tr>
+                <td>Focused</td>
+                <td><input type="color"></td>
+                <td><input type="color"></td>
+                <td><input type="color"></td>
+              </tr>
+              <tr>
+                <td>Active</td>
+                <td><input type="color"></td>
+                <td><input type="color"></td>
+                <td><input type="color"></td>
+              </tr>
+              <tr>
+                <td>Inactive</td>
+                <td><input type="color"></td>
+                <td><input type="color"></td>
+                <td><input type="color"></td>
+              </tr>
+              <tr>
+                <td>Urgent</td>
+                <td><input type="color"></td>
+                <td><input type="color"></td>
+                <td><input type="color"></td>
+              </tr>
+              <tr>
+                <td>Binding</td>
+                <td><input type="color"></td>
+                <td><input type="color"></td>
+                <td><input type="color"></td>
+              </tr>
+            </table>
+          </div>
         </article>
 
         <article>
           <h2>i3status</h2>
+
+          <div class="responsive-table">
+            <table>
+              <tr>
+                <td>Class</td>
+                <td>Background</td>
+                <td>Text</td>
+                <td>Separator</td>
+              </tr>
+              <tr>
+                <td>Basic</td>
+                <td><input type="color"></td>
+                <td><input type="color"></td>
+                <td><input type="color"></td>
+              </tr>
+              <tr>
+                <td>Good</td>
+                <td></td>
+                <td><input type="color"></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Degraded</td>
+                <td></td>
+                <td><input type="color"></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Bad</td>
+                <td></td>
+                <td><input type="color"></td>
+                <td></td>
+              </tr>
+            </table>
+          </div>
         </article>
 
         <article>
           <h2>dmenu</h2>
+
+          <div class="responsive-table">
+            <table>
+              <tr>
+                <td>Class</td>
+                <td>Background</td>
+                <td>Text</td>
+              </tr>
+              <tr>
+                <td>Normal</td>
+                <td><input type="color"></td>
+                <td><input type="color"></td>
+              </tr>
+              <tr>
+                <td>Selected</td>
+                <td><input type="color"></td>
+                <td><input type="color"></td>
+              </tr>
+            </table>
+          </div>
         </article>
       </section>
 
@@ -103,6 +257,15 @@
       </div>
 
       <div class="bar">
+        <span>W: (100% at Wireless SSID)</span>
+        <span>|</span>
+        <span>E: down</span>
+        <span>|</span>
+        <span>BAT 20%</span>
+        <span>|</span>
+        <span>125.5 GiB</span>
+        <span>|</span>
+        <span>2023-09-24 15:16:20</span>
       </div>
     </footer>
   </body>
