@@ -4,3 +4,89 @@ body {
   line-height: 1.6;
   letter-spacing: 0.04rem;
 }
+
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.dmenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: monospace;
+}
+
+.dmenu span {
+  padding: 2px 8px;
+}
+
+.responsive-table {
+  overflow-x: scroll;
+}
+
+table.i3-windows {
+  width: 100%;
+}
+
+table.i3-windows td {
+  text-align: center;
+  padding: 5px 10px;
+}
+
+td#window {
+  border-top: 0;
+  padding: 15px 10px;
+}
+
+td:not(main td) {
+  border-width: 3px;
+  border-style: solid;
+}
+
+main {
+  padding: 0 20px;
+}
+
+section.i3-colors {
+  float: left;
+  width: 50%;
+}
+
+section.codes {
+  float: right;
+  width: 50%;
+}
+
+section.references {
+  clear: both;
+  text-align: center;
+}
+
+article tr:first-child {
+  font-weight: 700;
+}
+
+article td {
+  padding: 5px 7px;
+}
+
+pre {
+  overflow-x: scroll;
+}
+
+.i3status {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+  section.i3-colors, section.codes {
+    width: 100%;
+  }
+}
