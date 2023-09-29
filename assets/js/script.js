@@ -7,7 +7,7 @@
 let colorPicker, inputId, targetState, targetElement;
 
 function updateColor(color, state, element) {
-  const elementState = document.querySelector(`#${state}`);
+  const elementState = document.getElementById(state);
 
   switch (element) {
     case "border":
@@ -75,11 +75,11 @@ function updateCode() {
   const i3Code = `
 # Class                 Border  Bground Text    Indicator Child_border
 client.focused          ${hexColor["title-focused-border"]} ${hexColor["title-focused-bg"]} ${hexColor["title-focused-text"]} ${hexColor["title-focused-indicator"]}   ${hexColor["title-focused-child-border"]}
-client.focused_inactive
-client.unfocused
-client.urgent
-client.placeholder
-client.background
+client.focused_inactive ${hexColor["title-inactive-border"]} ${hexColor["title-inactive-bg"]} ${hexColor["title-inactive-text"]} ${hexColor["title-inactive-indicator"]}   ${hexColor["title-inactive-child-border"]}
+client.unfocused        ${hexColor["title-unfocused-border"]} ${hexColor["title-unfocused-bg"]} ${hexColor["title-unfocused-text"]} ${hexColor["title-unfocused-indicator"]}   ${hexColor["title-unfocused-child-border"]}
+client.urgent           ${hexColor["title-urgent-border"]} ${hexColor["title-urgent-bg"]} ${hexColor["title-urgent-text"]} ${hexColor["title-urgent-indicator"]}   ${hexColor["title-urgent-child-border"]}
+client.placeholder      ${hexColor["title-placeholder-border"]} ${hexColor["title-placeholder-bg"]} ${hexColor["title-placeholder-text"]} ${hexColor["title-placeholder-indicator"]}   ${hexColor["title-placeholder-child-border"]}
+client.background               ${hexColor["title-window"]}
 
 bar {
   colors {
@@ -87,12 +87,12 @@ bar {
     statusline
     separator
 
-    # Class            Border  Bground  Text
-    focused_workspace
-    active_workspace
-    inactive_workspace
-    urgent_workspace
-    binding_mode
+    # Class            Border  Bground Text
+    focused_workspace  ${hexColor["workspace-focused-border"]} ${hexColor["workspace-focused-bg"]} ${hexColor["workspace-focused-text"]}
+    active_workspace   ${hexColor["workspace-active-border"]} ${hexColor["workspace-active-bg"]} ${hexColor["workspace-active-text"]}
+    inactive_workspace ${hexColor["workspace-inactive-border"]} ${hexColor["workspace-inactive-bg"]} ${hexColor["workspace-inactive-text"]}
+    urgent_workspace   ${hexColor["workspace-urgent-border"]} ${hexColor["workspace-urgent-bg"]} ${hexColor["workspace-urgent-text"]}
+    binding_mode       ${hexColor["workspace-binding-border"]} ${hexColor["workspace-binding-bg"]} ${hexColor["workspace-binding-text"]}
   }
 }
 `;
@@ -101,7 +101,7 @@ bar {
 }
 
 function changeColor() {
-  colorPicker = document.querySelector(`#${inputId}`);
+  colorPicker = document.getElementById(inputId);
   colorPicker.addEventListener("change", updateColor(colorPicker.value, targetState, targetElement));
   colorPicker.addEventListener("change", updateCode());
 }
