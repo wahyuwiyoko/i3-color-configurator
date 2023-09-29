@@ -124,33 +124,33 @@
               </tr>
               <tr>
                 <td>Focused</td>
-                <td><input type="color"></td>
-                <td><input type="color"></td>
-                <td><input type="color"></td>
+                <td><input type="color" id="workspace-focused-border" onchange="getId(this.id, 'focused-workspace', 'border')"></td>
+                <td><input type="color" id="workspace-focused-bg" onchange="getId(this.id, 'focused-workspace', 'bg')"></td>
+                <td><input type="color" id="workspace-focused-text" onchange="getId(this.id, 'focused-workspace', 'text')"></td>
               </tr>
               <tr>
                 <td>Active</td>
-                <td><input type="color"></td>
-                <td><input type="color"></td>
-                <td><input type="color"></td>
+                <td><input type="color" id="workspace-active-border" onchange="getId(this.id, 'active-workspace', 'border')"></td>
+                <td><input type="color" id="workspace-active-bg" onchange="getId(this.id, 'active-workspace', 'bg')"></td>
+                <td><input type="color" id="workspace-active-text" onchange="getId(this.id, 'active-workspace', 'text')"></td>
               </tr>
               <tr>
                 <td>Inactive</td>
-                <td><input type="color"></td>
-                <td><input type="color"></td>
-                <td><input type="color"></td>
+                <td><input type="color" id="workspace-inactive-border" onchange="getId(this.id, 'inactive-workspace', 'border')"></td>
+                <td><input type="color" id="workspace-inactive-bg" onchange="getId(this.id, 'inactive-workspace', 'bg')"></td>
+                <td><input type="color" id="workspace-inactive-text" onchange="getId(this.id, 'inactive-workspace', 'text')"></td>
               </tr>
               <tr>
                 <td>Urgent</td>
-                <td><input type="color"></td>
-                <td><input type="color"></td>
-                <td><input type="color"></td>
+                <td><input type="color" id="workspace-urgent-border" onchange="getId(this.id, 'urgent-workspace', 'border')"></td>
+                <td><input type="color" id="workspace-urgent-bg" onchange="getId(this.id, 'urgent-workspace', 'bg')"></td>
+                <td><input type="color" id="workspace-urgent-text" onchange="getId(this.id, 'urgent-workspace', 'text')"></td>
               </tr>
               <tr>
                 <td>Binding</td>
-                <td><input type="color"></td>
-                <td><input type="color"></td>
-                <td><input type="color"></td>
+                <td><input type="color" id="workspace-binding-border" onchange="getId(this.id, 'binding-workspace', 'border')"></td>
+                <td><input type="color" id="workspace-binding-bg" onchange="getId(this.id, 'binding-workspace', 'bg')"></td>
+                <td><input type="color" id="workspace-binding-text" onchange="getId(this.id, 'binding-workspace', 'text')"></td>
               </tr>
             </table>
           </div>
@@ -247,13 +247,11 @@
 
     <footer class="i3status">
       <div class="workspaces">
-        <span>1: Focused</span>
-        <span>2: Active</span>
-        <span>3: Inactive</span>
-        <span>4: Urgent</span>
-        <span>5: Binding</span>
-        <span>6</span>
-        <span>7</span>
+        <span id="focused-workspace">1: Focused</span>
+        <span id="active-workspace">2: Active</span>
+        <span id="inactive-workspace">3: Inactive</span>
+        <span id="urgent-workspace">4: Urgent</span>
+        <span id="binding-workspace">5: Binding</span>
       </div>
 
       <div class="bar">
@@ -262,8 +260,6 @@
         <span>E: down</span>
         <span>|</span>
         <span>BAT 20%</span>
-        <span>|</span>
-        <span>125.5 GiB</span>
         <span>|</span>
         <span>2023-09-24 15:16:20</span>
       </div>
