@@ -1,4 +1,4 @@
-/* 
+/*
   References:
   https://developer.mozilla.org/docs/Web/HTML/Element/Input/color
   https://developer.mozilla.org/docs/Web/API/HTMLElement/change_event
@@ -57,9 +57,53 @@ function updateWindowColor(state) {
   }
 }
 
+function getAllInputColor() {
+  let inputTags = {};
+
+  for (const inputTag of document.querySelectorAll("input")) {
+    if (inputTag.id) {
+      inputTags[inputTag.id] = inputTag.value;
+    }
+  }
+
+  return inputTags;
+}
+
+function updateCode() {
+  const hexColor = getAllInputColor();
+
+  const i3Code = `
+# Class                 Border  Bground Text    Indicator Child_border
+client.focused          ${hexColor["title-focused-border"]} ${hexColor["title-focused-bg"]} ${hexColor["title-focused-text"]} ${hexColor["title-focused-indicator"]}   ${hexColor["title-focused-child-border"]}
+client.focused_inactive
+client.unfocused
+client.urgent
+client.placeholder
+client.background
+
+bar {
+  colors {
+    background
+    statusline
+    separator
+
+    # Class            Border  Bground  Text
+    focused_workspace
+    active_workspace
+    inactive_workspace
+    urgent_workspace
+    binding_mode
+  }
+}
+`;
+
+  document.getElementById("i3-config-code").textContent = i3Code;
+}
+
 function changeColor() {
   colorPicker = document.querySelector(`#${inputId}`);
   colorPicker.addEventListener("change", updateColor(colorPicker.value, targetState, targetElement));
+  colorPicker.addEventListener("change", updateCode());
 }
 
 function getId(id, state, element) {
