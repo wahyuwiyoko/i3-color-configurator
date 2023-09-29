@@ -77,6 +77,11 @@ pre {
   overflow-x: scroll;
 }
 
+.i3status .workspaces span {
+  border-width: 2px;
+  border-style: solid;
+}
+
 .i3status {
   position: sticky;
   bottom: 0;
