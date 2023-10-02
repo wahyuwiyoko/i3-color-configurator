@@ -33,6 +33,11 @@ function updateColor(color, state, element) {
       updateWindowColor(state).style.borderRightColor = color;
       updateWindowColor(state).style.borderLeftColor = color;
       break;
+    case "separator":
+      document.querySelectorAll("#bar-separator").forEach((bar) => {
+        bar.style.color = color;
+      });
+      break;
     default:
       break;
   }
@@ -70,34 +75,51 @@ function getAllInputColor() {
 }
 
 function updateCode() {
-  const hexColor = getAllInputColor();
+  updatei3Code(getAllInputColor());
+  updatei3statusCode(getAllInputColor());
+}
 
+function updatei3Code(color) {
   const i3Code = `
 # Class                 Border  Bground Text    Indicator Child_border
-client.focused          ${hexColor["title-focused-border"]} ${hexColor["title-focused-bg"]} ${hexColor["title-focused-text"]} ${hexColor["title-focused-indicator"]}   ${hexColor["title-focused-child-border"]}
-client.focused_inactive ${hexColor["title-inactive-border"]} ${hexColor["title-inactive-bg"]} ${hexColor["title-inactive-text"]} ${hexColor["title-inactive-indicator"]}   ${hexColor["title-inactive-child-border"]}
-client.unfocused        ${hexColor["title-unfocused-border"]} ${hexColor["title-unfocused-bg"]} ${hexColor["title-unfocused-text"]} ${hexColor["title-unfocused-indicator"]}   ${hexColor["title-unfocused-child-border"]}
-client.urgent           ${hexColor["title-urgent-border"]} ${hexColor["title-urgent-bg"]} ${hexColor["title-urgent-text"]} ${hexColor["title-urgent-indicator"]}   ${hexColor["title-urgent-child-border"]}
-client.placeholder      ${hexColor["title-placeholder-border"]} ${hexColor["title-placeholder-bg"]} ${hexColor["title-placeholder-text"]} ${hexColor["title-placeholder-indicator"]}   ${hexColor["title-placeholder-child-border"]}
-client.background               ${hexColor["title-window"]}
+client.focused          ${color["title-focused-border"]} ${color["title-focused-bg"]} ${color["title-focused-text"]} ${color["title-focused-indicator"]}   ${color["title-focused-child-border"]}
+client.focused_inactive ${color["title-inactive-border"]} ${color["title-inactive-bg"]} ${color["title-inactive-text"]} ${color["title-inactive-indicator"]}   ${color["title-inactive-child-border"]}
+client.unfocused        ${color["title-unfocused-border"]} ${color["title-unfocused-bg"]} ${color["title-unfocused-text"]} ${color["title-unfocused-indicator"]}   ${color["title-unfocused-child-border"]}
+client.urgent           ${color["title-urgent-border"]} ${color["title-urgent-bg"]} ${color["title-urgent-text"]} ${color["title-urgent-indicator"]}   ${color["title-urgent-child-border"]}
+client.placeholder      ${color["title-placeholder-border"]} ${color["title-placeholder-bg"]} ${color["title-placeholder-text"]} ${color["title-placeholder-indicator"]}   ${color["title-placeholder-child-border"]}
+client.background               ${color["title-window"]}
 
 bar {
   colors {
-    background
-    statusline
-    separator
+    background ${color["status-basic-bg"]}
+    statusline ${color["status-basic-text"]}
+    separator  ${color["status-basic-separator"]}
 
     # Class            Border  Bground Text
-    focused_workspace  ${hexColor["workspace-focused-border"]} ${hexColor["workspace-focused-bg"]} ${hexColor["workspace-focused-text"]}
-    active_workspace   ${hexColor["workspace-active-border"]} ${hexColor["workspace-active-bg"]} ${hexColor["workspace-active-text"]}
-    inactive_workspace ${hexColor["workspace-inactive-border"]} ${hexColor["workspace-inactive-bg"]} ${hexColor["workspace-inactive-text"]}
-    urgent_workspace   ${hexColor["workspace-urgent-border"]} ${hexColor["workspace-urgent-bg"]} ${hexColor["workspace-urgent-text"]}
-    binding_mode       ${hexColor["workspace-binding-border"]} ${hexColor["workspace-binding-bg"]} ${hexColor["workspace-binding-text"]}
+    focused_workspace  ${color["workspace-focused-border"]} ${color["workspace-focused-bg"]} ${color["workspace-focused-text"]}
+    active_workspace   ${color["workspace-active-border"]} ${color["workspace-active-bg"]} ${color["workspace-active-text"]}
+    inactive_workspace ${color["workspace-inactive-border"]} ${color["workspace-inactive-bg"]} ${color["workspace-inactive-text"]}
+    urgent_workspace   ${color["workspace-urgent-border"]} ${color["workspace-urgent-bg"]} ${color["workspace-urgent-text"]}
+    binding_mode       ${color["workspace-binding-border"]} ${color["workspace-binding-bg"]} ${color["workspace-binding-text"]}
   }
 }
 `;
 
   document.getElementById("i3-config-code").textContent = i3Code;
+}
+
+function updatei3statusCode(color) {
+  const i3status = `
+general {
+  output_format = "i3bar"
+  colors = true
+  color_good = "${color["status-good-text"]}"
+  color_degraded = "${color["status-degraded-text"]}"
+  color_bad = "${color["status-bad-text"]}"
+}
+`;
+
+  document.getElementById("i3status-code").textContent = i3status
 }
 
 function changeColor() {

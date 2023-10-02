@@ -169,26 +169,26 @@
               </tr>
               <tr>
                 <td>Basic</td>
-                <td><input type="color"></td>
-                <td><input type="color"></td>
-                <td><input type="color"></td>
+                <td><input type="color" id="status-basic-bg" onchange="getId(this.id, 'i3status', 'bg')"></td>
+                <td><input type="color" id="status-basic-text" onchange="getId(this.id, 'bar-normal', 'text')"></td>
+                <td><input type="color" id="status-basic-separator" onchange="getId(this.id, 'bar-separator', 'separator')"></td>
               </tr>
               <tr>
                 <td>Good</td>
                 <td></td>
-                <td><input type="color"></td>
+                <td><input type="color" id="status-good-text" onchange="getId(this.id, 'bar-good', 'text')"></td>
                 <td></td>
               </tr>
               <tr>
                 <td>Degraded</td>
                 <td></td>
-                <td><input type="color"></td>
+                <td><input type="color" id="status-degraded-text" onchange="getId(this.id, 'bar-degraded', 'text')"></td>
                 <td></td>
               </tr>
               <tr>
                 <td>Bad</td>
                 <td></td>
-                <td><input type="color"></td>
+                <td><input type="color" id="status-bad-text" onchange="getId(this.id, 'bar-bad', 'text')"></td>
                 <td></td>
               </tr>
             </table>
@@ -245,7 +245,7 @@
       </section>
     </main>
 
-    <footer class="i3status">
+    <footer class="i3status" id="i3status">
       <div class="workspaces">
         <span id="focused-workspace">1: Focused</span>
         <span id="active-workspace">2: Active</span>
@@ -255,13 +255,13 @@
       </div>
 
       <div class="bar">
-        <span>W: (100% at Wireless SSID)</span>
-        <span>|</span>
-        <span>E: down</span>
-        <span>|</span>
-        <span>BAT 20%</span>
-        <span>|</span>
-        <span>2023-09-24 15:16:20</span>
+        <span id="bar-good">W: (100% at Wireless SSID)</span>
+        <span id="bar-separator">|</span>
+        <span id="bar-bad">E: down</span>
+        <span id="bar-separator">|</span>
+        <span id="bar-degraded">BAT 20%</span>
+        <span id="bar-separator">|</span>
+        <span id="bar-normal">2023-09-24 15:16:20</span>
       </div>
     </footer>
   </body>
