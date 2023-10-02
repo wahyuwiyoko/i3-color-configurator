@@ -2,9 +2,27 @@
   References:
   https://developer.mozilla.org/docs/Web/HTML/Element/Input/color
   https://developer.mozilla.org/docs/Web/API/HTMLElement/change_event
+  https://developer.mozilla.org/docs/Web/API/Window/load_event
 */
 
 let colorPicker, inputId, targetState, targetElement;
+
+// Load the startup() after page finish loaded
+window.addEventListener("load", startup());
+
+function startup() {
+  loadStartupColor(getDefaultColors());
+  updateCode();
+}
+
+function loadStartupColor(color) {
+  for (const input of document.getElementsByTagName("input")) {
+    // Change every color picker value
+    input.value = color[input.id];
+
+    updateColor(input.value, input.dataset.state, input.dataset.element);
+  }
+}
 
 function updateColor(color, state, element) {
   const elementState = document.getElementById(state);
@@ -150,4 +168,60 @@ function getId(id) {
   targetElement = document.getElementById(id).dataset.element;
 
   changeColor();
+}
+
+function getDefaultColors() {
+  return {
+    "dmenu-normal-bg": "#222222",
+    "dmenu-normal-text": "#bbbbbb",
+    "dmenu-selected-bg": "#005577",
+    "dmenu-selected-text": "#eeeeee",
+    "status-bad-text": "#ff0000",
+    "status-basic-bg": "#000000",
+    "status-basic-separator": "#666666",
+    "status-basic-text": "#ffffff",
+    "status-degraded-text": "#ffff00",
+    "status-good-text": "#00ff00",
+    "title-focused-bg": "#285577",
+    "title-focused-border": "#4c7899",
+    "title-focused-child-border": "#285577",
+    "title-focused-indicator": "#2e9ef4",
+    "title-focused-text": "#ffffff",
+    "title-inactive-bg": "#5f676a",
+    "title-inactive-border": "#333333",
+    "title-inactive-child-border": "#5f676a",
+    "title-inactive-indicator": "#484e50",
+    "title-inactive-text": "#ffffff",
+    "title-placeholder-bg": "#0c0c0c",
+    "title-placeholder-border": "#000000",
+    "title-placeholder-child-border": "#0c0c0c",
+    "title-placeholder-indicator": "#000000",
+    "title-placeholder-text": "#ffffff",
+    "title-unfocused-bg": "#222222",
+    "title-unfocused-border": "#333333",
+    "title-unfocused-child-border": "#222222",
+    "title-unfocused-indicator": "#292d2e",
+    "title-unfocused-text": "#888888",
+    "title-urgent-bg": "#900000",
+    "title-urgent-border": "#2f343a",
+    "title-urgent-child-border": "#900000",
+    "title-urgent-indicator": "#900000",
+    "title-urgent-text": "#ffffff",
+    "title-window": "#ffffff",
+    "workspace-active-bg": "#222222",
+    "workspace-active-border": "#333333",
+    "workspace-active-text": "#ffffff",
+    "workspace-binding-bg": "#900000",
+    "workspace-binding-border": "#2f343a",
+    "workspace-binding-text": "#ffffff",
+    "workspace-focused-bg": "#285577",
+    "workspace-focused-border": "#4c7899",
+    "workspace-focused-text": "#ffffff",
+    "workspace-inactive-bg": "#222222",
+    "workspace-inactive-border": "#333333",
+    "workspace-inactive-text": "#888888",
+    "workspace-urgent-bg": "#900000",
+    "workspace-urgent-border": "#2f343a",
+    "workspace-urgent-text": "#ffffff"
+  };
 }
