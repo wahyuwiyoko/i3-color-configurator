@@ -144,10 +144,10 @@ function changeColor() {
   colorPicker.addEventListener("change", updateCode());
 }
 
-function getId(id, state, element) {
+function getId(id) {
   inputId = id;
-  targetState = state;
-  targetElement = element;
+  targetState = document.getElementById(id).dataset.state;
+  targetElement = document.getElementById(id).dataset.element;
 
   changeColor();
 }

@@ -64,48 +64,48 @@
               </tr>
               <tr>
                 <td>Focused</td>
-                <td><input type="color" id="title-focused-border" onchange="getId(this.id, 'focused-window', 'border')"></td>
-                <td><input type="color" id="title-focused-bg" onchange="getId(this.id, 'focused-window', 'bg')"></td>
-                <td><input type="color" id="title-focused-text" onchange="getId(this.id, 'focused-window', 'text')"></td>
-                <td><input type="color" id="title-focused-indicator" onchange="getId(this.id, 'focused-window', 'indicator')"></td>
-                <td><input type="color" id="title-focused-child-border" onchange="getId(this.id, 'focused-window', 'child-border')"></td>
+                <td><input type="color" id="title-focused-border" data-state="focused-window" data-element="border" onchange="getId(this.id)"></td>
+                <td><input type="color" id="title-focused-bg" data-state="focused-window" data-element="bg" onchange="getId(this.id)"></td>
+                <td><input type="color" id="title-focused-text" data-state="focused-window" data-element="text" onchange="getId(this.id)"></td>
+                <td><input type="color" id="title-focused-indicator" data-state="focused-window" data-element="indicator" onchange="getId(this.id)"></td>
+                <td><input type="color" id="title-focused-child-border" data-state="focused-window" data-element="child-border" onchange="getId(this.id)"></td>
               </tr>
               <tr>
                 <td>Inactive</td>
-                <td><input type="color" id="title-inactive-border" onchange="getId(this.id, 'inactive-window', 'border')"></td>
-                <td><input type="color" id="title-inactive-bg" onchange="getId(this.id, 'inactive-window', 'bg')"></td>
-                <td><input type="color" id="title-inactive-text" onchange="getId(this.id, 'inactive-window', 'text')"></td>
-                <td><input type="color" id="title-inactive-indicator" onchange="getId(this.id, 'inactive-window', 'indicator')"></td>
-                <td><input type="color" id="title-inactive-child-border" onchange="getId(this.id, 'inactive-window', 'child-border')"></td>
+                <td><input type="color" id="title-inactive-border" data-state="inactive-window" data-element="border" onchange="getId(this.id)"></td>
+                <td><input type="color" id="title-inactive-bg" data-state="inactive-window" data-element="bg" onchange="getId(this.id)"></td>
+                <td><input type="color" id="title-inactive-text" data-state="inactive-window" data-element="text" onchange="getId(this.id)"></td>
+                <td><input type="color" id="title-inactive-indicator" data-state="inactive-window" data-element="indicator" onchange="getId(this.id)"></td>
+                <td><input type="color" id="title-inactive-child-border" data-state="inactive-window" data-element="child-border" onchange="getId(this.id)"></td>
               </tr>
               <tr>
                 <td>Unfocused</td>
-                <td><input type="color" id="title-unfocused-border" onchange="getId(this.id, 'unfocused-window', 'border')"></td>
-                <td><input type="color" id="title-unfocused-bg" onchange="getId(this.id, 'unfocused-window', 'bg')"></td>
-                <td><input type="color" id="title-unfocused-text" onchange="getId(this.id, 'unfocused-window', 'text')"></td>
-                <td><input type="color" id="title-unfocused-indicator" onchange="getId(this.id, 'unfocused-window', 'indicator')"></td>
-                <td><input type="color" id="title-unfocused-child-border" onchange="getId(this.id, 'unfocused-window', 'child-border')"></td>
+                <td><input type="color" id="title-unfocused-border" data-state="unfocused-window" data-element="border" onchange="getId(this.id)"></td>
+                <td><input type="color" id="title-unfocused-bg" data-state="unfocused-window" data-element="bg" onchange="getId(this.id)"></td>
+                <td><input type="color" id="title-unfocused-text" data-state="unfocused-window" data-element="text" onchange="getId(this.id)"></td>
+                <td><input type="color" id="title-unfocused-indicator" data-state="unfocused-window" data-element="indicator" onchange="getId(this.id)"></td>
+                <td><input type="color" id="title-unfocused-child-border" data-state="unfocused-window" data-element="child-border" onchange="getId(this.id)"></td>
               </tr>
               <tr>
                 <td>Urgent</td>
-                <td><input type="color" id="title-urgent-border" onchange="getId(this.id, 'urgent-window', 'border')"></td>
-                <td><input type="color" id="title-urgent-bg" onchange="getId(this.id, 'urgent-window', 'bg')"></td>
-                <td><input type="color" id="title-urgent-text" onchange="getId(this.id, 'urgent-window', 'text')"></td>
-                <td><input type="color" id="title-urgent-indicator" onchange="getId(this.id, 'urgent-window', 'indicator')"></td>
-                <td><input type="color" id="title-urgent-child-border" onchange="getId(this.id, 'urgent-window', 'child-border')"></td>
+                <td><input type="color" id="title-urgent-border" data-state="urgent-window" data-element="border" onchange="getId(this.id)"></td>
+                <td><input type="color" id="title-urgent-bg" data-state="urgent-window" data-element="bg" onchange="getId(this.id)"></td>
+                <td><input type="color" id="title-urgent-text" data-state="urgent-window" data-element="text" onchange="getId(this.id)"></td>
+                <td><input type="color" id="title-urgent-indicator" data-state="urgent-window" data-element="indicator" onchange="getId(this.id)"></td>
+                <td><input type="color" id="title-urgent-child-border" data-state="urgent-window" data-element="child-border" onchange="getId(this.id)"></td>
               </tr>
               <tr>
                 <td>Placeholder</td>
-                <td><input type="color" id="title-placeholder-border" onchange="getId(this.id, 'placeholder-window', 'border')"></td>
-                <td><input type="color" id="title-placeholder-bg" onchange="getId(this.id, 'placeholder-window', 'bg')"></td>
-                <td><input type="color" id="title-placeholder-text" onchange="getId(this.id, 'placeholder-window', 'text')"></td>
-                <td><input type="color" id="title-placeholder-indicator" onchange="getId(this.id, 'placeholder-window', 'indicator')"></td>
-                <td><input type="color" id="title-placeholder-child-border" onchange="getId(this.id, 'placeholder-window', 'child-border')"></td>
+                <td><input type="color" id="title-placeholder-border" data-state="placeholder-window" data-element="border" onchange="getId(this.id)"></td>
+                <td><input type="color" id="title-placeholder-bg" data-state="placeholder-window" data-element="bg" onchange="getId(this.id)"></td>
+                <td><input type="color" id="title-placeholder-text" data-state="placeholder-window" data-element="text" onchange="getId(this.id)"></td>
+                <td><input type="color" id="title-placeholder-indicator" data-state="placeholder-window" data-element="indicator" onchange="getId(this.id)"></td>
+                <td><input type="color" id="title-placeholder-child-border" data-state="placeholder-window" data-element="child-border" onchange="getId(this.id)"></td>
               </tr>
               <tr>
                 <td>Window</td>
                 <td></td>
-                <td><input type="color" id="title-window" onchange="getId(this.id, 'window', 'bg')"></td>
+                <td><input type="color" id="title-window" data-state="window" data-element="bg" onchange="getId(this.id)"></td>
               </tr>
             </table>
           </div>
@@ -124,33 +124,33 @@
               </tr>
               <tr>
                 <td>Focused</td>
-                <td><input type="color" id="workspace-focused-border" onchange="getId(this.id, 'focused-workspace', 'border')"></td>
-                <td><input type="color" id="workspace-focused-bg" onchange="getId(this.id, 'focused-workspace', 'bg')"></td>
-                <td><input type="color" id="workspace-focused-text" onchange="getId(this.id, 'focused-workspace', 'text')"></td>
+                <td><input type="color" id="workspace-focused-border" data-state="focused-workspace" data-element="border" onchange="getId(this.id)"></td>
+                <td><input type="color" id="workspace-focused-bg" data-state="focused-workspace" data-element="bg" onchange="getId(this.id)"></td>
+                <td><input type="color" id="workspace-focused-text" data-state="focused-workspace" data-element="text" onchange="getId(this.id)"></td>
               </tr>
               <tr>
                 <td>Active</td>
-                <td><input type="color" id="workspace-active-border" onchange="getId(this.id, 'active-workspace', 'border')"></td>
-                <td><input type="color" id="workspace-active-bg" onchange="getId(this.id, 'active-workspace', 'bg')"></td>
-                <td><input type="color" id="workspace-active-text" onchange="getId(this.id, 'active-workspace', 'text')"></td>
+                <td><input type="color" id="workspace-active-border" data-state="active-workspace" data-element="border" onchange="getId(this.id)"></td>
+                <td><input type="color" id="workspace-active-bg" data-state="active-workspace" data-element="bg" onchange="getId(this.id)"></td>
+                <td><input type="color" id="workspace-active-text" data-state="active-workspace" data-element="text" onchange="getId(this.id)"></td>
               </tr>
               <tr>
                 <td>Inactive</td>
-                <td><input type="color" id="workspace-inactive-border" onchange="getId(this.id, 'inactive-workspace', 'border')"></td>
-                <td><input type="color" id="workspace-inactive-bg" onchange="getId(this.id, 'inactive-workspace', 'bg')"></td>
-                <td><input type="color" id="workspace-inactive-text" onchange="getId(this.id, 'inactive-workspace', 'text')"></td>
+                <td><input type="color" id="workspace-inactive-border" data-state="inactive-workspace" data-element="border" onchange="getId(this.id)"></td>
+                <td><input type="color" id="workspace-inactive-bg" data-state="inactive-workspace" data-element="bg" onchange="getId(this.id)"></td>
+                <td><input type="color" id="workspace-inactive-text" data-state="inactive-workspace" data-element="text" onchange="getId(this.id)"></td>
               </tr>
               <tr>
                 <td>Urgent</td>
-                <td><input type="color" id="workspace-urgent-border" onchange="getId(this.id, 'urgent-workspace', 'border')"></td>
-                <td><input type="color" id="workspace-urgent-bg" onchange="getId(this.id, 'urgent-workspace', 'bg')"></td>
-                <td><input type="color" id="workspace-urgent-text" onchange="getId(this.id, 'urgent-workspace', 'text')"></td>
+                <td><input type="color" id="workspace-urgent-border" data-state="urgent-workspace" data-element="border" onchange="getId(this.id)"></td>
+                <td><input type="color" id="workspace-urgent-bg" data-state="urgent-workspace" data-element="bg" onchange="getId(this.id)"></td>
+                <td><input type="color" id="workspace-urgent-text" data-state="urgent-workspace" data-element="text" onchange="getId(this.id)"></td>
               </tr>
               <tr>
                 <td>Binding</td>
-                <td><input type="color" id="workspace-binding-border" onchange="getId(this.id, 'binding-workspace', 'border')"></td>
-                <td><input type="color" id="workspace-binding-bg" onchange="getId(this.id, 'binding-workspace', 'bg')"></td>
-                <td><input type="color" id="workspace-binding-text" onchange="getId(this.id, 'binding-workspace', 'text')"></td>
+                <td><input type="color" id="workspace-binding-border" data-state="binding-workspace" data-element="border" onchange="getId(this.id)"></td>
+                <td><input type="color" id="workspace-binding-bg" data-state="binding-workspace" data-element="bg" onchange="getId(this.id)"></td>
+                <td><input type="color" id="workspace-binding-text" data-state="binding-workspace" data-element="text" onchange="getId(this.id)"></td>
               </tr>
             </table>
           </div>
@@ -169,26 +169,26 @@
               </tr>
               <tr>
                 <td>Basic</td>
-                <td><input type="color" id="status-basic-bg" onchange="getId(this.id, 'i3status', 'bg')"></td>
-                <td><input type="color" id="status-basic-text" onchange="getId(this.id, 'bar-normal', 'text')"></td>
-                <td><input type="color" id="status-basic-separator" onchange="getId(this.id, 'bar-separator', 'separator')"></td>
+                <td><input type="color" id="status-basic-bg" data-state="i3status" data-element="bg" onchange="getId(this.id)"></td>
+                <td><input type="color" id="status-basic-text" data-state="bar-normal" data-element="text" onchange="getId(this.id)"></td>
+                <td><input type="color" id="status-basic-separator" data-state="bar-separator" data-element="separator" onchange="getId(this.id)"></td>
               </tr>
               <tr>
                 <td>Good</td>
                 <td></td>
-                <td><input type="color" id="status-good-text" onchange="getId(this.id, 'bar-good', 'text')"></td>
+                <td><input type="color" id="status-good-text" data-state="bar-good" data-element="text" onchange="getId(this.id)"></td>
                 <td></td>
               </tr>
               <tr>
                 <td>Degraded</td>
                 <td></td>
-                <td><input type="color" id="status-degraded-text" onchange="getId(this.id, 'bar-degraded', 'text')"></td>
+                <td><input type="color" id="status-degraded-text" data-state="bar-degraded" data-element="text" onchange="getId(this.id)"></td>
                 <td></td>
               </tr>
               <tr>
                 <td>Bad</td>
                 <td></td>
-                <td><input type="color" id="status-bad-text" onchange="getId(this.id, 'bar-bad', 'text')"></td>
+                <td><input type="color" id="status-bad-text" data-state="bar-bad" data-element="text" onchange="getId(this.id)"></td>
                 <td></td>
               </tr>
             </table>
@@ -207,13 +207,13 @@
               </tr>
               <tr>
                 <td>Normal</td>
-                <td><input type="color" id="dmenu-normal-bg" onchange="getId(this.id, 'dmenu', 'bg')"></td>
-                <td><input type="color" id="dmenu-normal-text" onchange="getId(this.id, 'dmenu-items', 'text')"></td>
+                <td><input type="color" id="dmenu-normal-bg" data-state="dmenu" data-element="bg" onchange="getId(this.id)"></td>
+                <td><input type="color" id="dmenu-normal-text" data-state="dmenu-items" data-element="text" onchange="getId(this.id)"></td>
               </tr>
               <tr>
                 <td>Selected</td>
-                <td><input type="color" id="dmenu-selected-bg" onchange="getId(this.id, 'dmenu-item', 'bg')"></td>
-                <td><input type="color" id="dmenu-selected-text" onchange="getId(this.id, 'dmenu-item', 'text')"></td>
+                <td><input type="color" id="dmenu-selected-bg" data-state="dmenu-item" data-element="bg" onchange="getId(this.id)"></td>
+                <td><input type="color" id="dmenu-selected-text" data-state="dmenu-item" data-element="text" onchange="getId(this.id)"></td>
               </tr>
             </table>
           </div>
