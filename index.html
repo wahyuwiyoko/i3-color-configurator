@@ -10,12 +10,12 @@
   </head>
   <body>
     <header>
-      <div class="dmenu">
-        <span class="prompt">dmenu prompt</span>
+      <div class="dmenu" id="dmenu">
+        <span id="dmenu-item">dmenu</span>
 
-        <div class="items">
+        <div class="items" id="dmenu-items">
           <span>[</span>
-          <span class="selected">411toppm</span>
+          <span id="dmenu-item">411toppm</span>
           <span>aa-enabled</span>
           <span>ac-local</span>
           <span>aconnect</span>
@@ -207,13 +207,13 @@
               </tr>
               <tr>
                 <td>Normal</td>
-                <td><input type="color"></td>
-                <td><input type="color"></td>
+                <td><input type="color" id="dmenu-normal-bg" onchange="getId(this.id, 'dmenu', 'bg')"></td>
+                <td><input type="color" id="dmenu-normal-text" onchange="getId(this.id, 'dmenu-items', 'text')"></td>
               </tr>
               <tr>
                 <td>Selected</td>
-                <td><input type="color"></td>
-                <td><input type="color"></td>
+                <td><input type="color" id="dmenu-selected-bg" onchange="getId(this.id, 'dmenu-item', 'bg')"></td>
+                <td><input type="color" id="dmenu-selected-text" onchange="getId(this.id, 'dmenu-item', 'text')"></td>
               </tr>
             </table>
           </div>

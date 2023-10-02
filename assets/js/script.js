@@ -21,9 +21,23 @@ function updateColor(color, state, element) {
         break;
       }
 
+      if (state === "dmenu-item") {
+        document.querySelectorAll("#dmenu-item").forEach((item) => {
+          item.style.backgroundColor = color;
+        });
+        break;
+      }
+
       elementState.style.backgroundColor = color;
       break;
     case "text":
+      if (state === "dmenu-item") {
+        document.querySelectorAll("#dmenu-item").forEach((item) => {
+          item.style.color = color;
+        });
+        break;
+      }
+
       elementState.style.color = color;
       break;
     case "indicator":
@@ -103,6 +117,8 @@ bar {
     binding_mode       ${color["workspace-binding-border"]} ${color["workspace-binding-bg"]} ${color["workspace-binding-text"]}
   }
 }
+
+bindsym $mod+d exec --no-startup-id dmenu_run -nf "${color["dmenu-normal-text"]}" -nb "${color["dmenu-normal-bg"]}" -sb "${color["dmenu-selected-bg"]}" -sf "${color["dmenu-selected-text"]}" -fn "monospace:size=10" -p "dmenu"
 `;
 
   document.getElementById("i3-config-code").textContent = i3Code;
@@ -119,7 +135,7 @@ general {
 }
 `;
 
-  document.getElementById("i3status-code").textContent = i3status
+  document.getElementById("i3status-code").textContent = i3status;
 }
 
 function changeColor() {
