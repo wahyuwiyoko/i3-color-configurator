@@ -162,13 +162,15 @@ function changeColor() {
   colorPicker.addEventListener("change", updateCode());
 }
 
-function getId(id) {
-  inputId = id;
-  targetState = document.getElementById(id).dataset.state;
-  targetElement = document.getElementById(id).dataset.element;
+document.querySelectorAll("input[type=color]").forEach((element) => {
+  element.addEventListener("change", () => {
+    inputId = element.id;
+    targetState = document.getElementById(element.id).dataset.state;
+    targetElement = document.getElementById(element.id).dataset.element;
 
-  changeColor();
-}
+    changeColor();
+  });
+});
 
 function getDefaultColors() {
   return {
