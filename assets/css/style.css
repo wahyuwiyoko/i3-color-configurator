@@ -1,8 +1,30 @@
+:root {
+  --bg-color: #faf3eb;
+  --text-color: #3b3852;
+  --link-color: #443653;
+  --border-color: #cecacd;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #191724;
+    --text-color: #e0def4;
+    --link-color: #d1bbec;
+    --border-color: #524f67;
+  }
+}
+
+html {
+  color-scheme: light dark;
+}
+
 body {
   margin: 0;
   font-family: sans-serif;
   line-height: 1.6;
   letter-spacing: 0.04rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 header {
@@ -10,6 +32,16 @@ header {
   top: 0;
   display: flex;
   flex-direction: column;
+}
+
+a {
+  color: var(--link-color);
+}
+
+input[type="color"] {
+  padding: 0;
+  border: 3px solid var(--border-color);
+  cursor: pointer;
 }
 
 .dmenu {
