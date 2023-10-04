@@ -20,7 +20,17 @@ const theme = await importTheme("./assets/themes/default.json");
 window.addEventListener("load", startup());
 
 function startup() {
-  loadStartupColor(theme);
+  let color = {};
+
+  for (const [key, value] of Object.entries(theme)) {
+    for (const [state, stateValue] of Object.entries(value)) {
+      for (const [element, elementValue] of Object.entries(stateValue)) {
+        color[`${key}-${state}-${element}`] = elementValue;
+      }
+    }
+  }
+
+  loadStartupColor(color);
   updateCode();
 }
 
@@ -128,7 +138,7 @@ client.focused_inactive ${color["title-inactive-border"]} ${color["title-inactiv
 client.unfocused        ${color["title-unfocused-border"]} ${color["title-unfocused-bg"]} ${color["title-unfocused-text"]} ${color["title-unfocused-indicator"]}   ${color["title-unfocused-child-border"]}
 client.urgent           ${color["title-urgent-border"]} ${color["title-urgent-bg"]} ${color["title-urgent-text"]} ${color["title-urgent-indicator"]}   ${color["title-urgent-child-border"]}
 client.placeholder      ${color["title-placeholder-border"]} ${color["title-placeholder-bg"]} ${color["title-placeholder-text"]} ${color["title-placeholder-indicator"]}   ${color["title-placeholder-child-border"]}
-client.background               ${color["title-window"]}
+client.background               ${color["title-window-bg"]}
 
 bar {
   colors {

@@ -1,53 +1,95 @@
 {
-  "title-focused-bg": "#285577",
-  "title-focused-border": "#4c7899",
-  "title-focused-child-border": "#285577",
-  "title-focused-indicator": "#2e9ef4",
-  "title-focused-text": "#ffffff",
-  "title-inactive-bg": "#5f676a",
-  "title-inactive-border": "#333333",
-  "title-inactive-child-border": "#5f676a",
-  "title-inactive-indicator": "#484e50",
-  "title-inactive-text": "#ffffff",
-  "title-placeholder-bg": "#0c0c0c",
-  "title-placeholder-border": "#000000",
-  "title-placeholder-child-border": "#0c0c0c",
-  "title-placeholder-indicator": "#000000",
-  "title-placeholder-text": "#ffffff",
-  "title-unfocused-bg": "#222222",
-  "title-unfocused-border": "#333333",
-  "title-unfocused-child-border": "#222222",
-  "title-unfocused-indicator": "#292d2e",
-  "title-unfocused-text": "#888888",
-  "title-urgent-bg": "#900000",
-  "title-urgent-border": "#2f343a",
-  "title-urgent-child-border": "#900000",
-  "title-urgent-indicator": "#900000",
-  "title-urgent-text": "#ffffff",
-  "title-window": "#ffffff",
-  "workspace-active-bg": "#222222",
-  "workspace-active-border": "#333333",
-  "workspace-active-text": "#ffffff",
-  "workspace-binding-bg": "#900000",
-  "workspace-binding-border": "#2f343a",
-  "workspace-binding-text": "#ffffff",
-  "workspace-focused-bg": "#285577",
-  "workspace-focused-border": "#4c7899",
-  "workspace-focused-text": "#ffffff",
-  "workspace-inactive-bg": "#222222",
-  "workspace-inactive-border": "#333333",
-  "workspace-inactive-text": "#888888",
-  "workspace-urgent-bg": "#900000",
-  "workspace-urgent-border": "#2f343a",
-  "workspace-urgent-text": "#ffffff",
-  "status-bad-text": "#ff0000",
-  "status-basic-bg": "#000000",
-  "status-basic-separator": "#666666",
-  "status-basic-text": "#ffffff",
-  "status-degraded-text": "#ffff00",
-  "status-good-text": "#00ff00",
-  "dmenu-normal-bg": "#222222",
-  "dmenu-normal-text": "#bbbbbb",
-  "dmenu-selected-bg": "#005577",
-  "dmenu-selected-text": "#eeeeee"
+  "title": {
+    "focused": {
+      "bg": "#285577",
+      "border": "#4c7899",
+      "child-border": "#285577",
+      "indicator": "#2e9ef4",
+      "text": "#ffffff"
+    },
+    "inactive": {
+      "bg": "#5f676a",
+      "border": "#333333",
+      "child-border": "#5f676a",
+      "indicator": "#484e50",
+      "text": "#ffffff"
+    },
+    "placeholder": {
+      "bg": "#0c0c0c",
+      "border": "#000000",
+      "child-border": "#0c0c0c",
+      "indicator": "#000000",
+      "text": "#ffffff"
+    },
+    "unfocused": {
+      "bg": "#222222",
+      "border": "#333333",
+      "child-border": "#222222",
+      "indicator": "#292d2e",
+      "text": "#888888"
+    },
+    "urgent": {
+      "bg": "#900000",
+      "border": "#2f343a",
+      "child-border": "#900000",
+      "indicator": "#900000",
+      "text": "#ffffff"
+    },
+    "window": {
+      "bg": "#ffffff"
+    }
+  },
+  "workspace": {
+    "active": {
+      "bg": "#222222",
+      "border": "#333333",
+      "text": "#ffffff"
+    },
+    "binding": {
+      "bg": "#900000",
+      "border": "#2f343a",
+      "text": "#ffffff"
+    },
+    "focused": {
+      "bg": "#285577",
+      "border": "#4c7899",
+      "text": "#ffffff"
+    },
+    "inactive": {
+      "bg": "#222222",
+      "border": "#333333",
+      "text": "#888888"
+    },
+    "urgent": {
+      "bg": "#900000",
+      "border": "#2f343a",
+      "text": "#ffffff"
+    }
+  },
+  "status": {
+    "basic": {
+      "bg": "#000000",
+      "separator": "#666666",
+      "text": "#ffffff"
+    },
+    "good": {
+      "text": "#00ff00"
+    },
+    "degraded": {
+      "text": "#ffff00"
+    },
+    "bad": {
+      "text": "#ff0000"
+    }
+  },
+  "dmenu": {
+    "normal": {
+      "bg": "#222222",
+      "text": "#bbbbbb"
+    },
+    "selected": {
+      "bg": "#005577",
+      "text": "#eeeeee"
+    }
+  }
 }
