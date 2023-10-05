@@ -3,6 +3,7 @@
   --text-color: #3b3852;
   --link-color: #443653;
   --border-color: #cecacd;
+  --code-bg: #f4ede8;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -11,6 +12,7 @@
     --text-color: #e0def4;
     --link-color: #d1bbec;
     --border-color: #524f67;
+    --code-bg: #21202e;
   }
 }
 
@@ -95,6 +97,7 @@ section.codes {
 section.references {
   clear: both;
   text-align: center;
+  padding: 20px 0;
 }
 
 article tr:first-child {
@@ -106,12 +109,16 @@ article td {
 }
 
 pre {
+  padding: 0 20px;
+  border-radius: 5px;
+  background-color: var(--code-bg);
   overflow-x: scroll;
 }
 
 .i3status .workspaces span {
   border-width: 2px;
   border-style: solid;
+  padding: 0 3px;
 }
 
 .i3status {
