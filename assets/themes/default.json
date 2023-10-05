@@ -1,76 +1,76 @@
 {
   "title": {
     "focused": {
-      "bg": "#285577",
       "border": "#4c7899",
-      "child-border": "#285577",
+      "bg": "#285577",
+      "text": "#ffffff",
       "indicator": "#2e9ef4",
-      "text": "#ffffff"
+      "child-border": "#285577"
     },
     "inactive": {
-      "bg": "#5f676a",
       "border": "#333333",
-      "child-border": "#5f676a",
+      "bg": "#5f676a",
+      "text": "#ffffff",
       "indicator": "#484e50",
-      "text": "#ffffff"
-    },
-    "placeholder": {
-      "bg": "#0c0c0c",
-      "border": "#000000",
-      "child-border": "#0c0c0c",
-      "indicator": "#000000",
-      "text": "#ffffff"
+      "child-border": "#5f676a"
     },
     "unfocused": {
-      "bg": "#222222",
       "border": "#333333",
-      "child-border": "#222222",
+      "bg": "#222222",
+      "text": "#888888",
       "indicator": "#292d2e",
-      "text": "#888888"
+      "child-border": "#222222"
     },
     "urgent": {
-      "bg": "#900000",
       "border": "#2f343a",
-      "child-border": "#900000",
+      "bg": "#900000",
+      "text": "#ffffff",
       "indicator": "#900000",
-      "text": "#ffffff"
+      "child-border": "#900000"
+    },
+    "placeholder": {
+      "border": "#000000",
+      "bg": "#0c0c0c",
+      "text": "#ffffff",
+      "indicator": "#000000",
+      "child-border": "#0c0c0c"
     },
     "window": {
       "bg": "#ffffff"
     }
   },
   "workspace": {
-    "active": {
-      "bg": "#222222",
-      "border": "#333333",
-      "text": "#ffffff"
-    },
-    "binding": {
-      "bg": "#900000",
-      "border": "#2f343a",
-      "text": "#ffffff"
-    },
     "focused": {
-      "bg": "#285577",
       "border": "#4c7899",
+      "bg": "#285577",
+      "text": "#ffffff"
+    },
+    "active": {
+      "border": "#333333",
+      "bg": "#222222",
       "text": "#ffffff"
     },
     "inactive": {
-      "bg": "#222222",
       "border": "#333333",
+      "bg": "#222222",
       "text": "#888888"
     },
     "urgent": {
-      "bg": "#900000",
       "border": "#2f343a",
+      "bg": "#900000",
+      "text": "#ffffff"
+    },
+    "binding": {
+      "border": "#2f343a",
+      "bg": "#900000",
       "text": "#ffffff"
     }
   },
   "status": {
     "basic": {
       "bg": "#000000",
-      "separator": "#666666",
-      "text": "#ffffff"
+      "text": "#ffffff",
+      "separator": "#666666"
     },
     "good": {
       "text": "#00ff00"
