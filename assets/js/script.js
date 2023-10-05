@@ -1,10 +1,3 @@
-/*
-  References:
-  https://developer.mozilla.org/docs/Web/HTML/Element/Input/color
-  https://developer.mozilla.org/docs/Web/API/HTMLElement/change_event
-  https://developer.mozilla.org/docs/Web/API/Window/load_event
-*/
-
 let colorPicker, inputId, targetState, targetElement;
 
 async function importTheme(path) {
@@ -22,6 +15,7 @@ window.addEventListener("load", startup());
 function startup() {
   let color = {};
 
+  // Format the JSON to ID of input color
   for (const [key, value] of Object.entries(theme)) {
     for (const [state, stateValue] of Object.entries(value)) {
       for (const [element, elementValue] of Object.entries(stateValue)) {
