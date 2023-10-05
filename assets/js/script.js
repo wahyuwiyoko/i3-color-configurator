@@ -7,12 +7,17 @@ async function importTheme(path) {
   return json;
 }
 
-const theme = await importTheme("./assets/themes/default.json");
+const defaultTheme = await importTheme("./assets/themes/default.json");
 
 // Load the startup() after page finish loaded
 window.addEventListener("load", startup());
 
 function startup() {
+  loadColor(getFormattedJson(defaultTheme));
+  updateCode();
+}
+
+function getFormattedJson(theme) {
   let color = {};
 
   // Format the JSON to ID of input color
@@ -24,11 +29,10 @@ function startup() {
     }
   }
 
-  loadStartupColor(color);
-  updateCode();
+  return color;
 }
 
-function loadStartupColor(color) {
+function loadColor(color) {
   for (const input of document.getElementsByTagName("input")) {
     // Change every color picker value
     input.value = color[input.id];
@@ -184,3 +188,13 @@ document.querySelectorAll("input[type=color]").forEach((element) => {
     changeColor();
   });
 });
+
+const themeElement = document.getElementById("themes");
+
+async function setSelectedTheme() {
+  const selectedTheme = await importTheme(`./assets/themes/${themeElement.value}.json`);
+  loadColor(getFormattedJson(selectedTheme));
+  updateCode();
+}
+
+themeElement.addEventListener("change", setSelectedTheme);
