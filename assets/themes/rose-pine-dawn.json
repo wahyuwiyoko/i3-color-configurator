@@ -1,0 +1,95 @@
+{
+  "title": {
+    "focused": {
+      "border": "#907aa9",
+      "bg": "#907aa9",
+      "text": "#faf4ed",
+      "indicator": "#907aa9",
+      "child-border": "#907aa9"
+    },
+    "inactive": {
+      "border": "#9893a5",
+      "bg": "#fffaf3",
+      "text": "#575279",
+      "indicator": "#9893a5",
+      "child-border": "#9893a5"
+    },
+    "unfocused": {
+      "border": "#9893a5",
+      "bg": "#fffaf3",
+      "text": "#575279",
+      "indicator": "#9893a5",
+      "child-border": "#9893a5"
+    },
+    "urgent": {
+      "border": "#b4637a",
+      "bg": "#b4637a",
+      "text": "#faf4ed",
+      "indicator": "#b4637a",
+      "child-border": "#b4637a"
+    },
+    "placeholder": {
+      "border": "#faf4ed",
+      "bg": "#faf4ed",
+      "text": "#575279",
+      "indicator": "#faf4ed",
+      "child-border": "#faf4ed"
+    },
+    "window": {
+      "bg": "#faf4ed"
+    }
+  },
+  "workspace": {
+    "focused": {
+      "border": "#907aa9",
+      "bg": "#907aa9",
+      "text": "#faf4ed"
+    },
+    "active": {
+      "border": "#907aa9",
+      "bg": "#907aa9",
+      "text": "#faf4ed"
+    },
+    "inactive": {
+      "border": "#f2e9e1",
+      "bg": "#f2e9e1",
+      "text": "#575279"
+    },
+    "urgent": {
+      "border": "#b4637a",
+      "bg": "#b4637a",
+      "text": "#faf4ed"
+    },
+    "binding": {
+      "border": "#d7827e",
+      "bg": "#d7827e",
+      "text": "#faf4ed"
+    }
+  },
+  "status": {
+    "basic": {
+      "bg": "#faf4ed",
+      "text": "#575279",
+      "separator": "#cecacd"
+    },
+    "good": {
+      "text": "#56949f"
+    },
+    "degraded": {
+      "text": "#ea9d34"
+    },
+    "bad": {
+      "text": "#b4637a"
+    }
+  },
+  "dmenu": {
+    "normal": {
+      "bg": "#faf4ed",
+      "text": "#575279"
+    },
+    "selected": {
+      "bg": "#907aa9",
+      "text": "#faf4ed"
+    }
+  }
+}
