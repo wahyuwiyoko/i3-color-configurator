@@ -1,0 +1,95 @@
+{
+  "title": {
+    "focused": {
+      "border": "#b4befe",
+      "bg": "#1e1e2e",
+      "text": "#cdd6f4",
+      "indicator": "#f5e0dc",
+      "child-border": "#b4befe"
+    },
+    "inactive": {
+      "border": "#6c7086",
+      "bg": "#1e1e2e",
+      "text": "#cdd6f4",
+      "indicator": "#f5e0dc",
+      "child-border": "#6c7086"
+    },
+    "unfocused": {
+      "border": "#6c7086",
+      "bg": "#1e1e2e",
+      "text": "#cdd6f4",
+      "indicator": "#f5e0dc",
+      "child-border": "#6c7086"
+    },
+    "urgent": {
+      "border": "#eba0ac",
+      "bg": "#1e1e2e",
+      "text": "#eba0ac",
+      "indicator": "#6c7086",
+      "child-border": "#eba0ac"
+    },
+    "placeholder": {
+      "border": "#6c7086",
+      "bg": "#1e1e2e",
+      "text": "#cdd6f4",
+      "indicator": "#6c7086",
+      "child-border": "#6c7086"
+    },
+    "window": {
+      "bg": "#1e1e2e"
+    }
+  },
+  "workspace": {
+    "focused": {
+      "border": "#b4befe",
+      "bg": "#b4befe",
+      "text": "#1e1e2e"
+    },
+    "active": {
+      "border": "#1e1e2e",
+      "bg": "#1e1e2e",
+      "text": "#cdd6f4"
+    },
+    "inactive": {
+      "border": "#1e1e2e",
+      "bg": "#1e1e2e",
+      "text": "#cdd6f4"
+    },
+    "urgent": {
+      "border": "#eba0ac",
+      "bg": "#eba0ac",
+      "text": "#1e1e2e"
+    },
+    "binding": {
+      "border": "#fab387",
+      "bg": "#fab387",
+      "text": "#1e1e2e"
+    }
+  },
+  "status": {
+    "basic": {
+      "bg": "#1e1e2e",
+      "text": "#cdd6f4",
+      "separator": "#7f849c"
+    },
+    "good": {
+      "text": "#94e2d5"
+    },
+    "degraded": {
+      "text": "#fab387"
+    },
+    "bad": {
+      "text": "#f38ba8"
+    }
+  },
+  "dmenu": {
+    "normal": {
+      "bg": "#1e1e2e",
+      "text": "#cdd6f4"
+    },
+    "selected": {
+      "bg": "#89dceb",
+      "text": "#1e1e2e"
+    }
+  }
+}
