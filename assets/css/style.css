@@ -3,7 +3,7 @@
   --text-color: #3b3852;
   --link-color: #443653;
   --border-color: #cecacd;
-  --code-bg: #f4ede8;
+  --highlight-bg: #f4ede8;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -12,7 +12,7 @@
     --text-color: #e0def4;
     --link-color: #d1bbec;
     --border-color: #524f67;
-    --code-bg: #21202e;
+    --highlight-bg: #21202e;
   }
 }
 
@@ -44,6 +44,14 @@ input[type="color"] {
   padding: 0;
   border: 3px solid var(--border-color);
   cursor: pointer;
+}
+
+select {
+  background-color: var(--highlight-bg);
+  color: var(--text-color);
+  border: 2px solid var(--border-color);
+  border-radius: 3px;
+  padding: 3px 0px 3px 5px;
 }
 
 .dmenu {
@@ -111,7 +119,7 @@ article td {
 pre {
   padding: 0 20px;
   border-radius: 5px;
-  background-color: var(--code-bg);
+  background-color: var(--highlight-bg);
   overflow-x: scroll;
 }
 
