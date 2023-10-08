@@ -8,11 +8,6 @@ let colorPicker, inputId, targetState, targetElement;
 // Load the startup() after page finish loaded
 window.addEventListener("load", startup());
 
-function startup() {
-  load.color(theme.formatted(theme.defaultTheme));
-  updateCode(getAllInputColor());
-}
-
 function getAllInputColor() {
   let inputTags = {};
 
@@ -25,6 +20,11 @@ function getAllInputColor() {
   return inputTags;
 }
 
+function startup() {
+  load.color(theme.formatted(theme.defaultTheme));
+  updateCode(getAllInputColor());
+}
+
 function changeColor() {
   colorPicker = document.getElementById(inputId);
   colorPicker.addEventListener("change", updateElementColor(colorPicker.value, targetState, targetElement));
@@ -34,8 +34,8 @@ function changeColor() {
 document.querySelectorAll("input[type=color]").forEach((element) => {
   element.addEventListener("change", () => {
     inputId = element.id;
-    targetState = document.getElementById(element.id).dataset.state;
-    targetElement = document.getElementById(element.id).dataset.element;
+    targetState = document.getElementById(inputId).dataset.state;
+    targetElement = document.getElementById(inputId).dataset.element;
 
     changeColor();
   });
