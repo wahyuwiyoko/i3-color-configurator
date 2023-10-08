@@ -1,37 +1,14 @@
 import updateCode from "./code.js";
+import * as theme from "./theme.js";
 
 let colorPicker, inputId, targetState, targetElement;
-
-async function importTheme(path) {
-  const getTheme = await fetch(path)
-  const json = await getTheme.json();
-
-  return json;
-}
-
-const defaultTheme = await importTheme("./assets/themes/default.json");
 
 // Load the startup() after page finish loaded
 window.addEventListener("load", startup());
 
 function startup() {
-  loadColor(getFormattedJson(defaultTheme));
+  loadColor(theme.formatted(theme.defaultTheme));
   updateCode(getAllInputColor());
-}
-
-function getFormattedJson(theme) {
-  let color = {};
-
-  // Format the JSON to ID of input color
-  for (const [key, value] of Object.entries(theme)) {
-    for (const [state, stateValue] of Object.entries(value)) {
-      for (const [element, elementValue] of Object.entries(stateValue)) {
-        color[`${key}-${state}-${element}`] = elementValue;
-      }
-    }
-  }
-
-  return color;
 }
 
 function loadColor(color) {
@@ -144,8 +121,8 @@ document.querySelectorAll("input[type=color]").forEach((element) => {
 const themeElement = document.getElementById("themes");
 
 async function setSelectedTheme() {
-  const selectedTheme = await importTheme(`./assets/themes/${themeElement.value}.json`);
-  loadColor(getFormattedJson(selectedTheme));
+  const selectedTheme = await theme.importTheme(`./assets/themes/${themeElement.value}.json`);
+  loadColor(theme.formatted(selectedTheme));
   updateCode(getAllInputColor());
 }
 
