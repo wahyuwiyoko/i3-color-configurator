@@ -1,6 +1,7 @@
 import updateCode from "./code.js";
 import * as theme from "./theme.js";
 import updateElementColor from "./element-color-update.js";
+import * as load from "./load-theme.js";
 
 let colorPicker, inputId, targetState, targetElement;
 
@@ -8,17 +9,8 @@ let colorPicker, inputId, targetState, targetElement;
 window.addEventListener("load", startup());
 
 function startup() {
-  loadColor(theme.formatted(theme.defaultTheme));
+  load.color(theme.formatted(theme.defaultTheme));
   updateCode(getAllInputColor());
-}
-
-function loadColor(color) {
-  for (const input of document.getElementsByTagName("input")) {
-    // Change every color picker value
-    input.value = color[input.id];
-
-    updateElementColor(input.value, input.dataset.state, input.dataset.element);
-  }
 }
 
 function getAllInputColor() {
@@ -51,10 +43,4 @@ document.querySelectorAll("input[type=color]").forEach((element) => {
 
 const themeElement = document.getElementById("themes");
 
-async function setSelectedTheme() {
-  const selectedTheme = await theme.importTheme(`./assets/themes/${themeElement.value}.json`);
-  loadColor(theme.formatted(selectedTheme));
-  updateCode(getAllInputColor());
-}
-
-themeElement.addEventListener("change", setSelectedTheme);
+themeElement.addEventListener("change", () => load.selectedTheme(themeElement, getAllInputColor));
