@@ -7,10 +7,10 @@ giving a star to the repository.
 
 Here are some contribution you can do:
 
-- Add new theme
-- Improve code quality
-- Improve website UI
-- Improve README or Fix Typos
+- [Add new theme](#add-new-theme)
+- [Improve code quality](#improve-code-quality)
+- [Improve website UI](#improve-website-ui)
+- [Improve README or fix typos](#improve-readme-or-fix-typos)
 
 See [How to Contribute](#how-to-contribute) section to guide you how to
 contribute this project.
