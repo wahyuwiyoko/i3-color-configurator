@@ -105,6 +105,27 @@ main {
   padding: 0 20px;
 }
 
+details {
+  margin-top: 1rem;
+  border: 3px solid var(--border-color);
+  background-color: var(--highlight-bg);
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  max-width: 13rem;
+}
+
+summary {
+  cursor: pointer;
+}
+
+ul {
+  padding: 0 1rem;
+}
+
+li {
+  padding: 0.5rem 0;
+}
+
 section.i3-colors {
   float: left;
   width: 50%;
@@ -115,15 +136,12 @@ section.codes {
   width: 50%;
 }
 
-section.references {
-  clear: both;
-  text-align: center;
-  padding: 20px 0;
+select, summary, article td{
+  font-weight: 500;
 }
 
 article td {
   padding: 5px 7px;
-  font-size: 500;
 }
 
 pre {
