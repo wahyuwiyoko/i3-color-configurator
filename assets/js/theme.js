@@ -1,5 +1,5 @@
 async function importTheme(path) {
-  const getTheme = await fetch(path)
+  const getTheme = await fetch(path);
   const json = await getTheme.json();
 
   return json;
