@@ -2,6 +2,7 @@ import updateCode from "./code.js";
 import * as theme from "./theme.js";
 import updateElementColor from "./element-color-update.js";
 import * as load from "./load-theme.js";
+import copyCode from "./copy-code.js"
 
 let colorPicker, inputId, targetState, targetElement;
 
@@ -44,3 +45,18 @@ document.querySelectorAll("input[type=color]").forEach((element) => {
 const themeElement = document.getElementById("themes");
 
 themeElement.addEventListener("change", () => load.selectedTheme(themeElement, getAllInputColor));
+
+document.querySelectorAll(".copy-code").forEach((element) => {
+  element.addEventListener("click", () => {
+    switch (element.id) {
+      case "copy-i3-config":
+        copyCode(element.id, "i3-config-code")
+        break;
+      case "copy-i3status-config":
+        copyCode(element.id, "i3status-code")
+        break;
+      default:
+        break;
+    }
+  });
+});

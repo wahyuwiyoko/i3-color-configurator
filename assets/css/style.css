@@ -3,6 +3,7 @@
   --text-color: #3b3852;
   --link-color: #443653;
   --border-color: #cecacd;
+  --button-color: #dfdad9;
   --highlight-bg: #f4ede8;
 }
 
@@ -12,6 +13,7 @@
     --text-color: #e0def4;
     --link-color: #d1bbec;
     --border-color: #524f67;
+    --button-color: #403d52;
     --highlight-bg: #21202e;
   }
 }
@@ -145,11 +147,24 @@ article td {
 }
 
 pre {
-  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem;
   font: 0.8rem monospace;
   border-radius: 5px;
   background-color: var(--highlight-bg);
   overflow-x: scroll;
+}
+
+.copy-code {
+  background-color: var(--button-color);
+  color: var(--text-color);
+  border: none;
+  padding: 0.3rem 0.4rem;
+  font: 500 .8rem sans-serif;
+  border-radius: 3px;
+  cursor: pointer;
 }
 
 .i3status .workspaces span {
