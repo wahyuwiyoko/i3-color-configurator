@@ -1,20 +1,18 @@
 :root {
-  --bg-color: #faf3eb;
-  --text-color: #3b3852;
-  --link-color: #443653;
-  --border-color: #cecacd;
-  --button-color: #dfdad9;
-  --highlight-bg: #f4ede8;
+  --background: #faf4eb;
+  --text: #3b3852;
+  --primary: #fffaf3;
+  --accent: #183f4e;
+  --outline: #dfdad9;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-color: #191724;
-    --text-color: #e0def4;
-    --link-color: #d1bbec;
-    --border-color: #524f67;
-    --button-color: #403d52;
-    --highlight-bg: #21202e;
+    --background: #191724;
+    --text: #e0def4;
+    --primary: #1f1d2e;
+    --accent: #a0cdde;
+    --outline: #403d52;
   }
 }
 
@@ -25,8 +23,8 @@ html {
 body {
   margin: 0;
   font: 0.9rem/1.6 sans-serif;
-  color: var(--text-color);
-  background-color: var(--bg-color);
+  color: var(--text);
+  background-color: var(--background);
   letter-spacing: 0.04rem;
 }
 
@@ -50,21 +48,21 @@ header {
 }
 
 a {
-  color: var(--link-color);
+  color: var(--accent);
   text-decoration-thickness: 2px;
   text-underline-offset: 5px;
 }
 
 input[type="color"] {
   padding: 0;
-  border: 3px solid var(--border-color);
+  border: 3px solid var(--outline);
   cursor: pointer;
 }
 
 select {
-  background-color: var(--highlight-bg);
-  color: var(--text-color);
-  border: 2px solid var(--border-color);
+  background-color: var(--primary);
+  color: var(--text);
+  border: 2px solid var(--outline);
   border-radius: 3px;
   padding: 3px 0px 3px 5px;
 }
@@ -109,8 +107,8 @@ main {
 
 details {
   margin-top: 1rem;
-  border: 3px solid var(--border-color);
-  background-color: var(--highlight-bg);
+  border: 3px solid var(--outline);
+  background-color: var(--primary);
   border-radius: 5px;
   padding: 0.5rem 1rem;
   max-width: 13rem;
@@ -153,13 +151,13 @@ pre {
   padding: 1rem;
   font: 0.8rem monospace;
   border-radius: 5px;
-  background-color: var(--highlight-bg);
+  background-color: var(--primary);
   overflow-x: scroll;
 }
 
 .copy-code {
-  background-color: var(--button-color);
-  color: var(--text-color);
+  background-color: var(--outline);
+  color: var(--text);
   border: none;
   padding: 0.3rem 0.4rem;
   font: 500 .8rem sans-serif;
